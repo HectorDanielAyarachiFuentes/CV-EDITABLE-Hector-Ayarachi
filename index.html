@@ -85,7 +85,10 @@
       </div>
     </div>
     <!-- Fin Experiencia -->
+
     
+    <p id="fechaDescarga"></p>
+
     <!-- Educación -->
     <div class="col-md-12">
       <div class="education">
@@ -158,18 +161,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="./script.js"></script>
-<script>
-  // Función para manejar la carga de la imagen
-  document.getElementById('avatar-upload').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        document.getElementById('avatar-img').src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+
 </body>
 </html>
