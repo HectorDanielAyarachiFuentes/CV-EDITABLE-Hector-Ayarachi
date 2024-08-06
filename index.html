@@ -8,13 +8,31 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://www.rugstudio.com/Shared/Themes/RugStudio2015/css/deputy.css'>
   <link rel="stylesheet" href="./style.css">
+  <style>
+    .avatar {
+      text-align: center;
+    }
+    .avatar img {
+      padding: 5px;
+      border-radius: 50%;
+      margin-top: 25px;
+      background: #fff;
+      max-width: 250px;
+      height: auto;
+    }
+    .avatar input[type="file"] {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 <div class="container cv pad-t-40 no-pad-lr">
   <!-- Columna Izquierda -->
   <div class="col-md-4 matchHeight no-pad-lr gray"> 
     <div class="col-md-12 avatar">
-      <img src="https://github.com/HectorDanielAyarachiFuentes/HectorDanielAyarachiFuentes/blob/main/DULCE.jpg?raw=true">
+      <img id="avatar-img" src="https://github.com/HectorDanielAyarachiFuentes/HectorDanielAyarachiFuentes/blob/main/DULCE.jpg?raw=true" alt="Avatar">
+      <input type="file" id="avatar-upload" accept="image/*" />
     </div>
     <div class="col-md-12 bio pad-b-20">
       <div class="center">
@@ -137,10 +155,21 @@
   <!-- Fin Columna Derecha -->
 </div>
 
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="./script.js"></script>
+<script>
+  // Función para manejar la carga de la imagen
+  document.getElementById('avatar-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('avatar-img').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
 </body>
 </html>

@@ -173,3 +173,13 @@ body {
 }
 
 
+img#avatar-img {
+	display: inline-block;
+	height: 195px; /* Mantén la misma altura y anchura para asegurar una forma circular */
+	width: 195px;
+	border-radius: 50%; /* Esto hará que la imagen sea redonda */
+	object-fit: cover; /* Asegura que la imagen no se estire, manteniendo la proporción y recortando el exceso si es necesario */
+	position: relative; /* Cambié a 'relative' para el posicionamiento, ya que 'cover' no es un valor válido */
+	top: 32px;
+	left: 4px;
+}
