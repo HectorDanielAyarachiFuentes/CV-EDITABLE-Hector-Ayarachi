@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Héctor Daniel Ayarachi Fuentes - CV</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://www.rugstudio.com/Shared/Themes/RugStudio2015/css/deputy.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container cv pad-t-40 no-pad-lr">
+  <!-- Columna Izquierda -->
+  <div class="col-md-4 matchHeight no-pad-lr gray"> 
+    <div class="col-md-12 avatar">
+      <img src="https://github.com/HectorDanielAyarachiFuentes/HectorDanielAyarachiFuentes/blob/main/DULCE.jpg?raw=true">
+    </div>
+    <div class="col-md-12 bio pad-b-20">
+      <div class="center">
+        <h1 class="name" contenteditable="true">Héctor Daniel Ayarachi Fuentes</h1>
+        <hr>
+        <h2 contenteditable="true">Técnico en Recursos Humanos</h2>
+      </div>
+      <div class="about m-t-50">
+        <h3>Sobre mí</h3>
+        <div class="pad-l-30" contenteditable="true">
+          <p>Soy un profesional apasionado por el desarrollo del talento humano, con más de 5 años de experiencia en el área de Recursos Humanos. Me caracterizo por mi capacidad para trabajar en equipo, mi orientación a resultados y mi habilidad para implementar estrategias innovadoras en la gestión del personal.</p>
+          <p>Mi objetivo es contribuir al crecimiento de las organizaciones a través de la optimización del capital humano, fomentando un ambiente laboral positivo y productivo.</p>
+        </div>
+      </div>
+      <div class="contact m-t-30">
+        <h3>Contacto</h3>
+        <div class="pad-l-30">
+          <p contenteditable="true"><span class="glyphicon glyphicon-earphone circle" aria-hidden="true"></span> (51) 987-654-321</p>
+          <p class="m-t-20" contenteditable="true"><span class="glyphicon glyphicon-map-marker circle" aria-hidden="true"></span> Av. Los Álamos 123<br><span class="m-l-50">Neuquén, Argentina</span></p>
+          <p class="m-t-20" contenteditable="true"><span class="glyphicon glyphicon-envelope circle" aria-hidden="true"></span> hector.ayarachi@email.com</p>
+          <p class="m-t-20" contenteditable="true"><span class="glyphicon glyphicon-link circle" aria-hidden="true"></span> www.linkedin.com/in/hectorayarachi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Columna Izquierda -->
+  
+  <!-- Columna Derecha -->
+  <div class="col-md-8 matchHeight no-pad-r">
+    <!-- Experiencia -->
+    <div class="col-md-12 m-t-20">
+      <div class="experience">
+        <p><span class="glyphicon glyphicon-briefcase"></span><span class="h3"> EXPERIENCIA</span></p>
+        <hr>
+        <div id="experience-section">
+          <!-- Sección de experiencia editables -->
+          <div class="row m-b-10 experience-entry"> 
+            <div class="col-md-4">
+              <p class="date" contenteditable="true"><b>Techno S.A.</b><br><i>Feb 2019 - Presente</i></p>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              <p class="title" contenteditable="true">Analista Senior de Recursos Humanos</p>
+              <p contenteditable="true">Lidero proyectos de desarrollo organizacional, gestiono procesos de reclutamiento y selección, y diseño programas de capacitación para una plantilla de 500 empleados.</p>
+              <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+            </div>
+          </div>
+          <!-- Más secciones de experiencia aquí -->
+        </div>
+        <button class="btn btn-primary" id="add-experience-btn">Añadir experiencia</button>
+      </div>
+    </div>
+    <!-- Fin Experiencia -->
+    
+    <!-- Educación -->
+    <div class="col-md-12">
+      <div class="education">
+        <p><span class="glyphicon glyphicon-education"></span><span class="h3"> EDUCACIÓN</span></p>
+        <hr>
+        <div id="education-section">
+          <!-- Sección de educación editable -->
+          <div class="row m-b-10 education-entry">
+            <div class="col-md-4">
+              <p class="date" contenteditable="true"><b>Maestría en Gestión del Talento Humano</b><br><i>2018 - 2020</i></p>
+            </div>
+            <div class="col-md-7 col-md-offset-1">
+              <p class="title" contenteditable="true">Universidad Nacional Mayor de San Marcos</p>
+              <p contenteditable="true">Especialización en desarrollo organizacional y gestión estratégica del capital humano.</p>
+              <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+            </div>
+          </div>
+          <!-- Más secciones de educación aquí -->
+        </div>
+        <button class="btn btn-primary" id="add-education-btn">Añadir educación</button>
+      </div>
+    </div>
+    <!-- Fin Educación -->
+    
+    <!-- Habilidades Laborales -->
+    <div class="col-md-12">
+      <div class="work-skills">
+        <p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="h3"> Habilidades Laborales</span></p>
+        <hr>
+        <div id="work-skills-section">
+          <!-- Habilidades Izquierda -->
+          <div class="col-md-6 no-pad-l skills-entry">
+            <dl class="skills">
+              <dt contenteditable="true">Gestión del talento</dt>
+              <dd contenteditable="true">90</dd>
+              <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+            </dl>
+          </div>
+          <!-- Fin Habilidades -->
+        </div>
+        <button class="btn btn-primary" id="add-work-skill-btn">Añadir habilidad laboral</button>
+      </div>
+    </div>
+    <!-- Fin Habilidades Laborales -->
+
+    <!-- Habilidades Personales -->
+    <div class="col-md-12">
+      <div class="personal-skills">
+        <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="h3"> Habilidades Personales</span></p>
+        <hr>
+        <div id="personal-skills-section">
+          <!-- Habilidades Izquierda -->
+          <div class="col-md-6 no-pad-l skills-entry">
+            <dl class="skills">
+              <dt contenteditable="true">Trabajo en equipo</dt>
+              <dd contenteditable="true">93</dd>
+              <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+            </dl>
+          </div>
+          <!-- Fin Habilidades -->
+        </div>
+        <button class="btn btn-primary" id="add-personal-skill-btn">Añadir habilidad personal</button>
+      </div>
+    </div>
+    <!-- Fin Habilidades Personales -->
+  </div>
+  <!-- Fin Columna Derecha -->
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
