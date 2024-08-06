@@ -1,86 +1,72 @@
-  // Función para añadir nueva sección de experiencia
-  document.getElementById('add-experience-btn').addEventListener('click', function() {
-    const newExperience = `
-      <div class="row m-b-10 experience-entry">
-        <div class="col-md-4">
-          <p class="date" contenteditable="true"><b>Nuevo Trabajo</b><br><i>Fecha</i></p>
-        </div>
-        <div class="col-md-7 col-md-offset-1">
-          <p class="title" contenteditable="true">Nuevo Puesto</p>
-          <p contenteditable="true">Descripción de las tareas y responsabilidades.</p>
-          <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
-        </div>
-      </div>`;
-    document.getElementById('experience-section').insertAdjacentHTML('beforeend', newExperience);
-    addRemoveEvent();
-  });
-
-  // Función para añadir nueva sección de educación
-  document.getElementById('add-education-btn').addEventListener('click', function() {
-    const newEducation = `
-      <div class="row m-b-10 education-entry">
-        <div class="col-md-4">
-          <p class="date" contenteditable="true"><b>Nueva Educación</b><br><i>Fecha</i></p>
-        </div>
-        <div class="col-md-7 col-md-offset-1">
-          <p class="title" contenteditable="true">Institución Educativa</p>
-          <p contenteditable="true">Descripción del programa educativo.</p>
-          <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
-        </div>
-      </div>`;
-    document.getElementById('education-section').insertAdjacentHTML('beforeend', newEducation);
-    addRemoveEvent();
-  });
-
-  // Función para añadir nueva habilidad laboral
-  document.getElementById('add-work-skill-btn').addEventListener('click', function() {
-    const newWorkSkill = `
-      <div class="col-md-6 no-pad-l skills-entry">
-        <dl class="skills">
-          <dt contenteditable="true">Nueva Habilidad</dt>
-          <dd contenteditable="true">0</dd>
-          <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
-        </dl>
-      </div>`;
-    document.getElementById('work-skills-section').insertAdjacentHTML('beforeend', newWorkSkill);
-    addRemoveEvent();
-  });
-
-  // Función para añadir nueva habilidad personal
-  document.getElementById('add-personal-skill-btn').addEventListener('click', function() {
-    const newPersonalSkill = `
-      <div class="col-md-6 no-pad-l skills-entry">
-        <dl class="skills">
-          <dt contenteditable="true">Nueva Habilidad</dt>
-          <dd contenteditable="true">0</dd>
-          <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
-        </dl>
-      </div>`;
-    document.getElementById('personal-skills-section').insertAdjacentHTML('beforeend', newPersonalSkill);
-    addRemoveEvent();
-  });
-
-  // Función para eliminar secciones
-  function addRemoveEvent() {
-    const removeButtons = document.querySelectorAll('.remove-btn');
-    removeButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        this.parentElement.parentElement.remove();
-      });
-    });
-  }
-
-  // Inicializar eventos de eliminación
+document.getElementById('add-experience-btn').addEventListener('click', function() {
+  const newExperience = `
+    <div class="row m-b-10 experience-entry">
+      <div class="col-md-4">
+        <p class="date" contenteditable="true"><b>Nuevo Trabajo</b><br><i>Fecha</i></p>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <p class="title" contenteditable="true">Nuevo Puesto</p>
+        <p contenteditable="true">Descripción de las tareas y responsabilidades.</p>
+        <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+      </div>
+    </div>`;
+  document.getElementById('experience-section').insertAdjacentHTML('beforeend', newExperience);
   addRemoveEvent();
+});
 
+document.getElementById('add-education-btn').addEventListener('click', function() {
+  const newEducation = `
+    <div class="row m-b-10 education-entry">
+      <div class="col-md-4">
+        <p class="date" contenteditable="true"><b>Nueva Educación</b><br><i>Fecha</i></p>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <p class="title" contenteditable="true">Institución Educativa</p>
+        <p contenteditable="true">Descripción del programa educativo.</p>
+        <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+      </div>
+    </div>`;
+  document.getElementById('education-section').insertAdjacentHTML('beforeend', newEducation);
+  addRemoveEvent();
+});
 
+document.getElementById('add-work-skill-btn').addEventListener('click', function() {
+  const newWorkSkill = `
+    <div class="col-md-6 no-pad-l skills-entry">
+      <dl class="skills">
+        <dt contenteditable="true">Nueva Habilidad</dt>
+        <dd contenteditable="true">0</dd>
+        <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+      </dl>
+    </div>`;
+  document.getElementById('work-skills-section').insertAdjacentHTML('beforeend', newWorkSkill);
+  addRemoveEvent();
+});
 
+document.getElementById('add-personal-skill-btn').addEventListener('click', function() {
+  const newPersonalSkill = `
+    <div class="col-md-6 no-pad-l skills-entry">
+      <dl class="skills">
+        <dt contenteditable="true">Nueva Habilidad</dt>
+        <dd contenteditable="true">0</dd>
+        <button class="btn btn-danger btn-xs remove-btn">Eliminar</button>
+      </dl>
+    </div>`;
+  document.getElementById('personal-skills-section').insertAdjacentHTML('beforeend', newPersonalSkill);
+  addRemoveEvent();
+});
 
-//arreglar no carga la iamgen
+function addRemoveEvent() {
+  const removeButtons = document.querySelectorAll('.remove-btn');
+  removeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      this.parentElement.parentElement.remove();
+    });
+  });
+}
 
+addRemoveEvent();
 
-
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
   const html2pdf = window.html2pdf;
 
@@ -94,12 +80,24 @@ document.addEventListener('DOMContentLoaded', function () {
   savePdfBtn.addEventListener('click', function () {
     downloadPDF();
   });
+
+  // Evento para cargar imagen de avatar
+  document.getElementById('avatar-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('avatar-img').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
 });
 
 function downloadPDF() {
   // Obtener la fecha actual
   const fechaActual = new Date();
-  
+
   // Formatear la fecha como "YYYY-MM-DD_HH-mm-ss"
   const formatoFecha = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
   const fechaFormateada = fechaActual.toLocaleString('es-ES', formatoFecha)
@@ -109,11 +107,9 @@ function downloadPDF() {
   // Mostrar la fecha en el elemento HTML
   document.getElementById('fechaDescarga').innerText = `Fecha de descarga: ${fechaFormateada}`;
 
-  // Esconder los elementos no deseados, excepto la imagen del avatar
-  document.querySelectorAll('.remove-btn, #add-experience-btn, #add-education-btn, #add-work-skill-btn, #add-personal-skill-btn, #avatar-upload').forEach(el => {
-    if (el.id !== 'avatar-upload') {
-      el.style.display = 'none';
-    }
+  // Esconder los elementos no deseados
+  document.querySelectorAll('.remove-btn, #add-experience-btn, #add-education-btn, #add-work-skill-btn, #add-personal-skill-btn').forEach(el => {
+    el.style.display = 'none';
   });
 
   // Establecer estilos de impresión
@@ -162,7 +158,7 @@ function downloadPDF() {
   // Generar el PDF
   html2pdf().from(document.body).set(options).toPdf().get('pdf').then(function(pdf) {
     // Volver a mostrar los elementos después de la generación del PDF
-    document.querySelectorAll('.remove-btn, #add-experience-btn, #add-education-btn, #add-work-skill-btn, #add-personal-skill-btn, #avatar-upload').forEach(el => el.style.display = '');
+    document.querySelectorAll('.remove-btn, #add-experience-btn, #add-education-btn, #add-work-skill-btn, #add-personal-skill-btn').forEach(el => el.style.display = '');
 
     // Descargar el PDF
     pdf.save(`CV_Hector_Daniel_Ayarachi_Fuentes_${fechaFormateada}.pdf`);
