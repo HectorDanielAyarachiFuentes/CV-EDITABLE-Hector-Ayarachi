@@ -81,13 +81,20 @@ document.addEventListener('DOMContentLoaded', function () {
     downloadPDF();
   });
 
-  // Evento para cargar imagen de avatar
-  document.getElementById('avatar-upload').addEventListener('change', function(event) {
+  // Evento para cargar imagen de avatar al hacer clic sobre ella
+  const avatarImg = document.getElementById('avatar-img');
+  const avatarUpload = document.getElementById('avatar-upload');
+
+  avatarImg.addEventListener('click', function() {
+    avatarUpload.click();
+  });
+
+  avatarUpload.addEventListener('change', function(event) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = function(e) {
-        document.getElementById('avatar-img').src = e.target.result;
+        avatarImg.src = e.target.result;
       };
       reader.readAsDataURL(file);
     }
