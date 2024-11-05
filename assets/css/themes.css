@@ -1,0 +1,73 @@
+/* Tema oscuro */
+.theme-dark {
+    --primary-color: #ecf0f1;
+    --secondary-color: #bdc3c7;
+    --accent-color: #3498db;
+    --text-primary: #ecf0f1;
+    --text-secondary: #bdc3c7;
+    --background-primary: #2c3e50;
+    --background-secondary: #34495e;
+    --border-color: #465c74;
+}
+
+.theme-dark .cv-container {
+    background-color: var(--background-primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.theme-dark .timeline-dot::before {
+    background-color: var(--border-color);
+}
+
+.theme-dark .skill-bar,
+.theme-dark .language-bar {
+    background-color: var(--border-color);
+}
+
+.theme-dark [contenteditable="true"]:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark [contenteditable="true"]:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .add-btn {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.theme-dark .add-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--background-primary);
+}
+
+/* Ajustes adicionales para el tema oscuro */
+.theme-dark .profile-info h1 {
+    color: var(--text-primary);
+}
+
+.theme-dark .profile-info h2 {
+    color: var(--text-secondary);
+}
+
+.theme-dark section h3 {
+    color: var(--text-primary);
+}
+
+.theme-dark .experience-header h4,
+.theme-dark .education-header h4 {
+    color: var(--text-primary);
+}
+
+.theme-dark .date {
+    color: var(--text-secondary);
+}
+
+.theme-dark .contact-item {
+    color: var(--text-secondary);
+}
+
+.theme-dark .contact-item i {
+    color: var(--accent-color);
+} 
